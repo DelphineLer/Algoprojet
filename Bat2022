@@ -6,6 +6,17 @@
 #include "Bat2022.H"
 
 
+#define P 7
+#define C 5
+#define Cbis 5
+#define D 3
+#define Dbis 3
+#define Dter 3
+#define S 1
+#define Sbis 1
+#define Ster 1
+#define Squatre 1
+
 int main ()
 {
     int choix;
@@ -48,5 +59,8 @@ int main ()
             break;
     }
 
+    placementbateau();
+
     return 0;
 }
+
