@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "Bat2022.H"
+
+
+int main ()
+{
+    int choix;
+    int tab[15][15];
+    for (int i=0;i<5;i++)
+    {
+        printf("\n");
+    }
+    printf("        JOUONS A LA BATAILLE NAVAL ");//on affiche JOUONS A LA BATAILLE NAVAL
+
+
+    for (int i=0;i<5;i++)
+    {
+        printf("\n");
+    }
+    grille(tab);//on appelle le sous programme grille
+
+    printf("\n");
+    printf("\n");
+    switch(menu())
+    {
+        case 1:
+            printf("Vous avez décider de jouer, c'est un bon choix !\n");
+            break;
+
+        case 2 :
+            printf("Vous avez décider de charger votre partie !\n");
+            break;
+
+        case 3:
+            printf("Vous avez besoin d'aide,on va vous éclairer !\n");
+            break;
+
+        case 4:
+            printf("Vous avez l'option quitter, c'est un triste choix !\n");
+            break;
+
+        case 5:
+            printf("Vous avez décider de sauvegarder la partie , c'est un bon choix !\n");
+            break;
+    }
+
+    return 0;
+}
