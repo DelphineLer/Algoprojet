@@ -35,19 +35,19 @@ int menu()
     return choix;
 }
 
-void SaisirL()
+int SaisirL()//chosir la ligne
 {
-    int i;
+    char j;
     do
     {
         printf("Choissisez la ligne: ");
-        scanf("%d",&i);
-    }while(i<0 ||i>15)
-        return i;
+        scanf("%c",&j);
+    }while(j<0 ||j>15);
+        return j;
 
 }
 
-void SaisirC()
+int SaisirC()//chosir la colonne
 {
     int i;
     do
@@ -55,19 +55,30 @@ void SaisirC()
         printf("Choissisez la colone: ");
         scanf("%d",&i);
         printf("\n");
-    }while(i<0 ||i>15)
+    }while(i<0 ||i>15);
     return i;
 }
 
-int saisirOrien()
+int SaisirOrien()//choisir l'orietation
 {
-    int i;
+    int k;
     do
     {
-       printf("Choissisez une orientation \n0-) p")
-    }
+       printf("Choissisez une orientation: \n 0 si vous voulez le placer horizontalement et 1 si vous voulez le placer verticalement");
+       scanf("%d",&k);
+       printf("\n");
+    }while(k>1 ||k<0);
+    return k;
 }
 
+
+void placementbateau()
+{
+    SaisirC();
+    SaisirL();
+    SaisirOrien();
+
+}
 void Charger()
 {
 
